@@ -69,7 +69,11 @@ useEffect(() => {
     )
     }
     else{
-      <div>Something is wrong</div>
+      currentPage = (
+      <div>
+        Something is wrong
+      </div>
+      )
     }
   }
 
