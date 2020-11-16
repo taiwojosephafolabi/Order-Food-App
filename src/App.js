@@ -10,7 +10,7 @@ function App() {
   const [mainPage, setMainPage] = useState(true);
   const [selectedFood, setSelectedFood] = useState();
   const [orders, setOrders] = useState(1);
-  const [orderPrices, setOrderPrices] = useState();
+  const [orderPrices, setOrderPrices] = useState(null);
   const [basket, setBasket] = useState(false);
   let dataTypes = ApiDatas.map((data) => data.type);
   let TypesOfOrder = dataTypes.filter(

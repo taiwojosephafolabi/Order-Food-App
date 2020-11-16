@@ -9,13 +9,24 @@ const BasketPage = ({
   orderPrices,
   orders,
 }) => {
+  let prices;
+  if(orderPrices === null){
+    prices = (
+      selectedFood.price
+    )
+  }
+  else{
+    prices = (
+      orderPrices
+    )
+  } 
   return (
     <div className="basketPageContainer">
       <div className="info-BasketContainer">
         <div>
           <img src={selectedFood.src} alt="ordered food" className="img" />
           <p>{orders}</p>
-          <p>£ {orderPrices}</p>
+          <p>£ {prices}</p>
         </div>
         <div className="basketButtonOrders">
           <button className="basket_button" onClick={AddOrder}>
