@@ -1,14 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-const MenuTemplate = ({ SameTypeData , setSelectedFood , setBasket}) => {
- 
-  
-  const updatePage = (item) =>{
-      setSelectedFood(item);
-      setBasket(true);
-    }
-
+const MenuTemplate = ({ SameTypeData, setSelectedFood, setBasket }) => {
+  const updatePage = (item) => {
+    setSelectedFood(item);
+    setBasket(true);
+    console.log(item);
+  };
   return (
     <div className="container">
       <div className="row">
@@ -25,7 +23,10 @@ const MenuTemplate = ({ SameTypeData , setSelectedFood , setBasket}) => {
                 <p className="card-text item_description">{item.description}</p>
                 <div className="order_card_container">
                   <span className="price_card">Price : £{item.price}</span>
-                  <button  className="btn_card" onClick={updatePage(item)}>
+                  <button
+                    className="btn_card"
+                    onClick={(event) => updatePage(item)}
+                  >
                     order
                   </button>
                 </div>

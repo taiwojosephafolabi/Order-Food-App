@@ -13,7 +13,7 @@ const BasketPage = ({
     <div className="basketPageContainer">
       <div className="info-BasketContainer">
         <div>
-          <img src= {selectedFood.src} alt="ordered food" className="img" />
+          <img src={selectedFood.src} alt="ordered food" className="img" />
           <p>{orders}</p>
           <p>£ {orderPrices}</p>
         </div>
@@ -27,9 +27,6 @@ const BasketPage = ({
           <button className="basket_button" onClick={CancelOrder}>
             cancel
           </button>
-          {/* <button className="basket_button" onClick={setBack(false)}>
-            Back
-          </button> */}
         </div>
       </div>
     </div>
