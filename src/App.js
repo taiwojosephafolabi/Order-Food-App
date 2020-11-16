@@ -7,28 +7,25 @@ import BasketPage from "./components/BasketPage";
 import "./App.css";
 
 function App() {
-
   const [mainPage, setMainPage] = useState(true);
   const [selectedFood, setSelectedFood] = useState(null);
   const [orders, setOrders] = useState(1);
   const [orderPrices, setOrderPrices] = useState(null);
   const [basket, setBasket] = useState(false);
-  const [basketItems, setBasketItems] = useState();
+
   let dataTypes = ApiDatas.map((data) => data.type);
   let TypesOfOrder = dataTypes.filter(
     (data, index, newData) => newData.indexOf(data) === index
   );
-    
-    
-    useEffect(() => {
-      if(selectedFood !== null)
-      console.log("selectedFood = ", selectedFood);
-    }, [selectedFood])
+
+  useEffect(() => {
+    if (selectedFood !== null) console.log("selectedFood = ", selectedFood);
+  }, [selectedFood]);
 
   const AddOrder = () => {
     setOrders(orders + 1);
     setOrderPrices(selectedFood.price * (orders + 1));
-    console.log(basket)
+    console.log(basket);
   };
   const CancelOrder = () => {
     setOrders(1);
@@ -44,7 +41,7 @@ function App() {
   };
 
   const GoBack = () => {
-    console.log(basket)
+    console.log(basket);
     setBasket(false);
   };
 
@@ -59,7 +56,6 @@ function App() {
           ApiDatas={ApiDatas}
           setSelectedFood={setSelectedFood}
           setBasket={setBasket}
-          // basketItems={basketItems}
           setBasketItems={setBasketItems}
           selectedFood={selectedFood}
         />

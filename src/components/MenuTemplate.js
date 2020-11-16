@@ -5,22 +5,21 @@ const MenuTemplate = ({
   SameTypeData,
   setSelectedFood,
   setBasket,
-  // basketItems,
-  // setBasketItems,
   selectedFood,
 }) => {
+ 
+  let basketItems = [];
+
   const updatePage = (item) => {
     if(selectedFood !== null ){
-    setSelectedFood([...selectedFood,{...item}]);
+    // setSelectedFood([...selectedFood,{...item}]);
+    basketItems.push(item);
     setBasket(true);
   }
-    // // setBasketItems([{...selectedFood}]);
-    // }
-    // else{
-    // setSelectedFood(item);
-    // setBasket(true);
-    // setBasketItems(item);
-    // }
+    else{
+    setSelectedFood(item);
+    setBasket(true);
+      }
   };
   return (
     <div className="container">
