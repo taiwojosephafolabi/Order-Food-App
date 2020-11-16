@@ -1,0 +1,29 @@
+**Remember that onClick handlers should be functions, not calls to functions. 
+ X Wrong : onClick = {function ellie()} 
+So if you want to call a function in a handler, you may need to make an arrow function. 
+  Correct : onClick = {() => function ellie ()}
+
+
+**The onClick handler is a function which takes an event (ALWAYS)
+
+
+**if you write onClick={(item) => updatePage(item)} you will pass the event to updatePage
+BUT that’s not what you want - you want to pass the item
+
+
+**So if you write onClick={(item) => updatePage(item)}
+You are saying:
+“Make a function, and whatever argument is given to it (which will be the event), pass that to updatePage”
+Which means you’re passing the event to updatePage
+
+
+**In this code:
+onClick={(event) => updatePage(item)}
+You’re not passing the argument to updatePage
+There are two different variables there:
+event(which is the argument to the onClick handler - the event), 
+and item, which is a variable you’re making earlier in the function Added to your saved items.
+If you write onClick={(item) => updatePage(item)}
+you’re saying “Whatever the argument to the onClick is (the event), give that to updatePage
+If you write onClick={(event) => updatePage(item)} 
+you’re saying “I don’t care what argument was given to onClick (the event), give the item to updatePage

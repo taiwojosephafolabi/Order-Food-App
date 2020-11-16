@@ -59,7 +59,7 @@ function App() {
         />
       );
     } else {
-      currentPage = <div>Something is wrong</div>;
+      currentPage = <div>Something went wrong</div>;
     }
   }
 
