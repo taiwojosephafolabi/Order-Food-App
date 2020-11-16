@@ -5,7 +5,15 @@ import MenuTemplate from "./MenuTemplate";
 import SidebarMenu from "./SidebarMenu";
 import "../App.css";
 
-const MenuPage = ({TypesOfOrder,ApiDatas,setSelectedFood,setBasket}) => {
+const MenuPage = ({
+  TypesOfOrder,
+  ApiDatas,
+  setSelectedFood,
+  setBasket,
+  // basketItems,
+  // setBasketItems,
+  selectedFood,
+}) => {
   return (
     <div>
       <Navbar />
@@ -19,7 +27,9 @@ const MenuPage = ({TypesOfOrder,ApiDatas,setSelectedFood,setBasket}) => {
           </div>
           <div className="main_menu">
             {TypesOfOrder.map((data) => {
-              let sameTypesFoods = ApiDatas.filter((element) => element.type === `${data}`);
+              let sameTypesFoods = ApiDatas.filter(
+                (element) => element.type === `${data}`
+              );
               return (
                 <div>
                   <div id={`${data}`}>
@@ -31,6 +41,9 @@ const MenuPage = ({TypesOfOrder,ApiDatas,setSelectedFood,setBasket}) => {
                     SameTypeData={sameTypesFoods}
                     setSelectedFood={setSelectedFood}
                     setBasket={setBasket}
+                    // basketItems={basketItems}
+                    // setBasketItems={setBasketItems}
+                    selectedFood={selectedFood}
                   />
                 </div>
               );

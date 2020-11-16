@@ -1,11 +1,26 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-const MenuTemplate = ({ SameTypeData, setSelectedFood, setBasket }) => {
+const MenuTemplate = ({
+  SameTypeData,
+  setSelectedFood,
+  setBasket,
+  // basketItems,
+  // setBasketItems,
+  selectedFood,
+}) => {
   const updatePage = (item) => {
-    setSelectedFood(item);
+    if(selectedFood !== null ){
+    setSelectedFood([...selectedFood,{...item}]);
     setBasket(true);
-    console.log(item);
+  }
+    // // setBasketItems([{...selectedFood}]);
+    // }
+    // else{
+    // setSelectedFood(item);
+    // setBasket(true);
+    // setBasketItems(item);
+    // }
   };
   return (
     <div className="container">
