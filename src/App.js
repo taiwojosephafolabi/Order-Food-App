@@ -7,6 +7,7 @@ import BasketPage from "./components/BasketPage";
 import "./App.css";
 
 function App() {
+
   const [mainPage, setMainPage] = useState(true);
   const [page, setPage] = useState("");
   const [cart, setCart] = useState([]);
@@ -14,10 +15,15 @@ function App() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [amountOfOrders, setAmountOfOrders] = useState(0);
   const [orders, setOrders] = useState(0);
+
   let dataTypes = ApiDatas.map((data) => data.type);
   let TypesOfOrder = dataTypes.filter(
     (data, index, newData) => newData.indexOf(data) === index
   );
+  let sameOrdersByName = cart.map(food => food.name);
+  let orderNamesInCart = sameOrdersByName.filter((foodname , index , newCart) => newCart.indexOf(foodname) === index);
+
+
 
   useEffect(() => {
     if (cart.length !== 0){ 
@@ -36,18 +42,19 @@ function App() {
   };
 
   const addMore = (food) => {
-    setOrders(orders + 1);
-    setTotalPrice(totalPrice + food.price * orders);
-    setAmountOfOrders(amountOfOrders + orders);
+    setTotalPrice(totalPrice + (food.price * (orders + 1)));
+    setAmountOfOrders(amountOfOrders + 1);
+    setOrders(orders + 1)
   };
 
   const MinusOrder = (food) => {
     if (orders - 1 > 0) {
+      setTotalPrice(totalPrice - (food.price * (orders - 1)));
+      setAmountOfOrders(amountOfOrders - 1);
       setOrders(orders - 1);
-      setTotalPrice(totalPrice - food.price * orders);
-      setAmountOfOrders(amountOfOrders - orders);
-    } else {
-      return;
+    } 
+    else {
+      setOrders(amountOfOrders);
     }
   };
 
@@ -73,6 +80,15 @@ function App() {
           cart={cart}
           setCart={setCart}
           setPage={setPage}
+          orderNamesInCart={orderNamesInCart}
+          orders={orders}
+          setOrders={setOrders}
+          wholeOrderPrices={wholeOrderPrices}
+          setWholeOrderPrices={setWholeOrderPrices}
+          totalPrice={totalPrice}
+          setTotalPrice={setTotalPrice}
+          amountOfOrders={amountOfOrders}
+          setAmountOfOrders={setAmountOfOrders}
         />
       );
     } else if (page === "Shopping List") {

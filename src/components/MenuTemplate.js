@@ -1,9 +1,30 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-const MenuTemplate = ({ SameTypeDatas, cart, setCart }) => {
+const MenuTemplate = ({
+  SameTypeDatas,
+  cart,
+  setCart,
+  orderNamesInCart,
+  orders,
+  setOrders,
+  wholeOrderPrices,
+  setWholeOrderPrices,
+  totalPrice,
+  setTotalPrice,
+  amountOfOrders,
+  setAmountOfOrders,
+}) => {
   const addToCart = (food) => {
-    setCart([...cart, { ...food }]);
+    if (orderNamesInCart.includes(food.name)) {
+      setOrders(orders + 1);
+      setWholeOrderPrices(wholeOrderPrices + food.price);
+      setTotalPrice(totalPrice + food.price);
+      setAmountOfOrders(amountOfOrders + 1);
+    }
+    else {
+      setCart([...cart, { ...food }]);
+    }
     // console.log("chosen FOOD", chosenFood);
     // console.log("CartList", cart);
   };

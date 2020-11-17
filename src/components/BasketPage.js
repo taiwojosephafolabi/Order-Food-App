@@ -9,7 +9,7 @@ const BasketPage = ({ cart, GoBack , addMore , MinusOrder , RemoveFoodFromCart ,
         Back
       </button>
       <p>TotalPrice : {totalPrice}</p>
-      <p>Orders : {amountOfOrders}</p>
+      <p>Amount of Orders : {amountOfOrders}</p>
       {cart.map((chosenFood, index) => {
         return (
           <div key={index}>
