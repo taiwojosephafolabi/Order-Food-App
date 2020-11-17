@@ -8,69 +8,40 @@ import "./App.css";
 
 function App() {
   const [mainPage, setMainPage] = useState(true);
-  const [selectedFood, setSelectedFood] = useState(null);
-  const [orders, setOrders] = useState(1);
-  const [orderPrices, setOrderPrices] = useState(null);
-  const [basket, setBasket] = useState(false);
-
+  const [page, setPage] = useState("");
+  const [cart, setCart] = useState([]);
   let dataTypes = ApiDatas.map((data) => data.type);
   let TypesOfOrder = dataTypes.filter(
     (data, index, newData) => newData.indexOf(data) === index
   );
 
-  useEffect(() => {
-    if (selectedFood !== null) console.log("selectedFood = ", selectedFood);
-  }, [selectedFood]);
-
-  const AddOrder = () => {
-    setOrders(orders + 1);
-    setOrderPrices(selectedFood.price * (orders + 1));
-    console.log(basket);
-  };
-  const CancelOrder = () => {
-    setOrders(1);
-    setOrderPrices(selectedFood.price);
-  };
-  const MinusOrder = () => {
-    if (orders - 1 > 0) {
-      setOrders(orders - 1);
-      setOrderPrices(orderPrices - selectedFood.price);
-    } else {
-      setOrders(1);
-    }
-  };
-
   const GoBack = () => {
-    console.log(basket);
-    setBasket(false);
+    setPage("Menu Page");
   };
 
   let currentPage;
   if (mainPage === true) {
-    currentPage = <HomePage mainPage={mainPage} setMainPage={setMainPage} />;
+    currentPage = (
+      <HomePage
+        mainPage={mainPage}
+        setMainPage={setMainPage}
+        setPage={setPage}
+      />
+    );
   } else {
-    if (basket === false) {
+    if (page === "Menu Page") {
       currentPage = (
         <MainMenuPage
           TypesOfOrder={TypesOfOrder}
           ApiDatas={ApiDatas}
-          setSelectedFood={setSelectedFood}
-          setBasket={setBasket}
-          setBasketItems={setBasketItems}
-          selectedFood={selectedFood}
+          cart={cart}
+          setCart={setCart}
+          setPage={setPage}
         />
       );
-    } else if (basket === true) {
+    } else if (page === "Shopping List") {
       currentPage = (
-        <BasketPage
-          selectedFood={selectedFood}
-          AddOrder={AddOrder}
-          CancelOrder={CancelOrder}
-          MinusOrder={MinusOrder}
-          orderPrices={orderPrices}
-          orders={orders}
-          GoBack={GoBack}
-        />
+        <BasketPage GoBack={GoBack} cart={cart} setCart={setCart} />
       );
     } else {
       currentPage = <div>Something went wrong</div>;

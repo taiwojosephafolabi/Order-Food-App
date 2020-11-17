@@ -5,18 +5,13 @@ import MenuTemplate from "./MenuTemplate";
 import SidebarMenu from "./SidebarMenu";
 import "../App.css";
 
-const MenuPage = ({
-  TypesOfOrder,
-  ApiDatas,
-  setSelectedFood,
-  setBasket,
-  // basketItems,
-  // setBasketItems,
-  selectedFood,
-}) => {
+const MenuPage = ({ TypesOfOrder, ApiDatas, cart, setCart, setPage }) => {
   return (
     <div>
       <Navbar />
+      <button onClick={() => setPage("Shopping List")}>
+        Go to basket({cart.length})
+      </button>
       <div className="menuPage_container container">
         <div className="menu_container  container">
           <div className="title_mainMenu">
@@ -38,12 +33,9 @@ const MenuPage = ({
                     </span>
                   </div>
                   <MenuTemplate
-                    SameTypeData={sameTypesFoods}
-                    setSelectedFood={setSelectedFood}
-                    setBasket={setBasket}
-                    // basketItems={basketItems}
-                    // setBasketItems={setBasketItems}
-                    selectedFood={selectedFood}
+                    SameTypeDatas={sameTypesFoods}
+                    cart={cart}
+                    setCart={setCart}
                   />
                 </div>
               );

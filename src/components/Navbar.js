@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import '../App.css';
+import "../App.css";
 
 const Navbar = () => {
   return (
@@ -14,10 +14,11 @@ const Navbar = () => {
             className="d-inline-block align-top"
             alt="Five Guys logo"
           />
-          <span className="nav_title">
-          </span>
+          <span className="nav_title"></span>
         </a>
       </nav>
+      <div>
+      </div>
     </div>
   );
 };

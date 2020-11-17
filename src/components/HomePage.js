@@ -1,7 +1,13 @@
 import React from "react";
 import Navbar from "./Navbar";
 
-const HomePage = ({mainPage,setMainPage}) => {
+const HomePage = ({mainPage,setMainPage,setPage}) => {
+
+  function showMenuPage () {
+    setPage("Menu Page");
+    setMainPage(!mainPage);
+  }
+
   return (
     <div>
       <Navbar />
@@ -13,7 +19,7 @@ const HomePage = ({mainPage,setMainPage}) => {
             online supports service.you can order your food anytime anywhere.
           </p>
           <p>Feel Free to take a look at our menu</p>
-          <button type="button" className="button btn" onClick={() => setMainPage(!mainPage)}>
+          <button type="button" className="button btn" onClick={() => showMenuPage()}>
             Menu
           </button>
         </div>

@@ -1,47 +1,37 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-const MenuTemplate = ({
-  SameTypeData,
-  setSelectedFood,
-  setBasket,
-  selectedFood,
-}) => {
- 
-  let basketItems = [];
-
-  const updatePage = (item) => {
-    if(selectedFood !== null ){
-    // setSelectedFood([...selectedFood,{...item}]);
-    basketItems.push(item);
-    setBasket(true);
-  }
-    else{
-    setSelectedFood(item);
-    setBasket(true);
-      }
+const MenuTemplate = ({ SameTypeDatas, cart, setCart }) => {
+  const addToCart = (chosenFood) => {
+    setCart([...cart, { ...chosenFood }]);
+    console.log("chosen FOOD", chosenFood);
+    console.log("CartList", cart);
   };
   return (
     <div className="container">
       <div className="row">
-        {SameTypeData.map((item) => {
+        {SameTypeDatas.map((chosenFood, index) => {
           return (
-            <div className="card">
+            <div className="card" key={index}>
               <img
                 className="card-img-top"
-                src={item.src}
-                alt="Card image cap"
+                src={chosenFood.src}
+                alt={chosenFood.name}
               />
               <div className="card-body">
-                <h5 className="card-title">{item.name}</h5>
-                <p className="card-text item_description">{item.description}</p>
+                <h5 className="card-title">{chosenFood.name}</h5>
+                <p className="card-text item_description">
+                  {chosenFood.description}
+                </p>
                 <div className="order_card_container">
-                  <span className="price_card">Price : £{item.price}</span>
+                  <span className="price_card">
+                    Price : £{chosenFood.price}
+                  </span>
                   <button
                     className="btn_card"
-                    onClick={(event) => updatePage(item)}
+                    onClick={(event) => addToCart(chosenFood)}
                   >
-                    order
+                    add to basket
                   </button>
                 </div>
               </div>
