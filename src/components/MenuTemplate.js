@@ -2,10 +2,10 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
 const MenuTemplate = ({ SameTypeDatas, cart, setCart }) => {
-  const addToCart = (chosenFood) => {
-    setCart([...cart, { ...chosenFood }]);
-    console.log("chosen FOOD", chosenFood);
-    console.log("CartList", cart);
+  const addToCart = (food) => {
+    setCart([...cart, { ...food }]);
+    // console.log("chosen FOOD", chosenFood);
+    // console.log("CartList", cart);
   };
   return (
     <div className="container">
