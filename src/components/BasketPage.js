@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import BasketItems from "./BasketItems";
 
 const BasketPage = ({ cart, GoBack , addMore , MinusOrder , RemoveFoodFromCart ,totalPrice , amountOfOrders }) => {
-  return (
+ return (
     <div>
       <button className="basket_button" onClick={() => GoBack()}>
         Back

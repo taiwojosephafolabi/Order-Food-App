@@ -27,10 +27,17 @@ function App() {
 
   useEffect(() => {
     if (cart.length !== 0){ 
+      if(cart.length === 1){
+      setWholeOrderPrices(cart.map((food) => food.price));
+      setTotalPrice(wholeOrderPrices);
+      setAmountOfOrders(1);
+      }
+      else{
       setWholeOrderPrices(cart.map((food) => food.price));
       let sumOfOrdersPrices = wholeOrderPrices.reduce(function (a, b) {return Number(a) + Number(b);}, 0);
       setTotalPrice(sumOfOrdersPrices);
       setAmountOfOrders(cart.length);
+      }
     }
   }, [cart])
   

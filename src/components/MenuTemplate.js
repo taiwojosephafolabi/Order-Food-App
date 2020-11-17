@@ -18,12 +18,14 @@ const MenuTemplate = ({
   const addToCart = (food) => {
     if (orderNamesInCart.includes(food.name)) {
       setOrders(orders + 1);
-      setWholeOrderPrices(wholeOrderPrices + food.price);
-      setTotalPrice(totalPrice + food.price);
+      setWholeOrderPrices(wholeOrderPrices + Number(food.price));
+      setTotalPrice(totalPrice + Number(food.price));
       setAmountOfOrders(amountOfOrders + 1);
     }
     else {
       setCart([...cart, { ...food }]);
+      setTotalPrice(totalPrice + Number(food.price));
+      setOrders(orders +  1);
     }
     // console.log("chosen FOOD", chosenFood);
     // console.log("CartList", cart);
