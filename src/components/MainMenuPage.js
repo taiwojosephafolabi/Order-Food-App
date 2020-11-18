@@ -11,21 +11,12 @@ const MenuPage = ({
   cart,
   setCart,
   setPage,
-  orderNamesInCart,
-  orders,
-  setOrders,
-  wholeOrderPrices,
-  setWholeOrderPrices,
-  totalPrice,
-  setTotalPrice,
-  amountOfOrders,
-  setAmountOfOrders,
 }) => {
   return (
     <div>
       <Navbar />
-      <button onClick={() => setPage("Shopping List")}>
-        Go to basket
+      <button className="basketButton" onClick={() => setPage("Shopping List")}>
+        Go to basket({cart.length})
       </button>
       <div className="menuPage_container container">
         <div className="menu_container  container">
@@ -52,14 +43,6 @@ const MenuPage = ({
                     cart={cart}
                     setCart={setCart}
                     orderNamesInCart={orderNamesInCart}
-                    orders={orders}
-                    setOrders={setOrders}
-                    wholeOrderPrices={wholeOrderPrices}
-                    setWholeOrderPrices={setWholeOrderPrices}
-                    totalPrice={totalPrice}
-                    setTotalPrice={setTotalPrice}
-                    amountOfOrders={amountOfOrders}
-                    setAmountOfOrders={setAmountOfOrders}
                   />
                 </div>
               );

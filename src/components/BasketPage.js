@@ -2,14 +2,20 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import BasketItems from "./BasketItems";
 
-const BasketPage = ({ cart, GoBack , addMore , MinusOrder , RemoveFoodFromCart ,totalPrice , amountOfOrders }) => {
- return (
+const BasketPage = ({
+  cart,
+  GoBack,
+  // addMore,
+  // MinusOrder,
+  RemoveFoodFromCart,
+}) => {
+  return (
     <div>
       <button className="basket_button" onClick={() => GoBack()}>
         Back
       </button>
-      <p>TotalPrice : {totalPrice}</p>
-      <p>Amount of Orders : {amountOfOrders}</p>
+      <p>TotalPrice : {}</p>
+      <p>Amount of Orders : {}</p>
       {cart.map((chosenFood, index) => {
         return (
           <div key={index}>
@@ -17,8 +23,8 @@ const BasketPage = ({ cart, GoBack , addMore , MinusOrder , RemoveFoodFromCart ,
               chosenFood={chosenFood}
               index={index}
               RemoveFoodFromCart={RemoveFoodFromCart}
-              MinusOrder={MinusOrder}
-              addMore={addMore}
+              // MinusOrder={MinusOrder}
+              // addMore={addMore}
             />
           </div>
         );

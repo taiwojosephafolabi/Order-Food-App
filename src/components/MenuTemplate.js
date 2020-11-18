@@ -6,30 +6,12 @@ const MenuTemplate = ({
   cart,
   setCart,
   orderNamesInCart,
-  orders,
-  setOrders,
-  wholeOrderPrices,
-  setWholeOrderPrices,
-  totalPrice,
-  setTotalPrice,
-  amountOfOrders,
-  setAmountOfOrders,
 }) => {
   const addToCart = (food) => {
-    if (orderNamesInCart.includes(food.name)) {
-      setOrders(orders + 1);
-      setWholeOrderPrices(wholeOrderPrices + Number(food.price));
-      setTotalPrice(totalPrice + Number(food.price));
-      setAmountOfOrders(amountOfOrders + 1);
-    }
-    else {
       setCart([...cart, { ...food }]);
-      setTotalPrice(totalPrice + Number(food.price));
-      setOrders(orders +  1);
     }
-    // console.log("chosen FOOD", chosenFood);
-    // console.log("CartList", cart);
-  };
+
+    
   return (
     <div className="container">
       <div className="row">
