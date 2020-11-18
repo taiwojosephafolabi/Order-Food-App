@@ -14,21 +14,23 @@ const BasketPage = ({
       <button className="basket_button" onClick={() => GoBack()}>
         Back
       </button>
+      <div className="OrdersInfo">
       <p>TotalPrice : {}</p>
       <p>Amount of Orders : {}</p>
+      </div>
+      <div className="basketItemsContainer">
       {cart.map((chosenFood, index) => {
         return (
-          <div key={index}>
+          <div  key={index}>
             <BasketItems
               chosenFood={chosenFood}
               index={index}
               RemoveFoodFromCart={RemoveFoodFromCart}
-              // MinusOrder={MinusOrder}
-              // addMore={addMore}
             />
           </div>
         );
       })}
+    </div>
     </div>
   );
 };

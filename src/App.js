@@ -20,10 +20,7 @@ function App() {
   let orderNamesInCart = sameOrdersByName.filter((foodname, index, newCart) => newCart.indexOf(foodname) === index);
 
   const RemoveFoodFromCart = (foodToRemove) => {
-    let newShoppingList = cart.filter((food) => food !== foodToRemove);
-    setTotalPrice(totalPrice - foodToRemove.price);
-    setAmountOfOrders(amountOfOrders - 1);
-    setCart(newShoppingList);
+     cart.filter((food) => food !== foodToRemove);
   };
 
   const GoBack = () => {
@@ -48,7 +45,7 @@ function App() {
           cart={cart}
           setCart={setCart}
           setPage={setPage}
-          orderNamesInCart={orderNamesInCart}
+          // orderNamesInCart={orderNamesInCart}
         />
       );
     } else if (page === "Shopping List") {

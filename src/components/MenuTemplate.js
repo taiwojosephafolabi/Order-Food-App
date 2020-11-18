@@ -5,13 +5,13 @@ const MenuTemplate = ({
   SameTypeDatas,
   cart,
   setCart,
-  orderNamesInCart,
+  // orderNamesInCart,
 }) => {
   const addToCart = (food) => {
       setCart([...cart, { ...food }]);
     }
 
-    
+
   return (
     <div className="container">
       <div className="row">

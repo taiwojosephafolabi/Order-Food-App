@@ -42,7 +42,7 @@ const MenuPage = ({
                     SameTypeDatas={sameTypesFoods}
                     cart={cart}
                     setCart={setCart}
-                    orderNamesInCart={orderNamesInCart}
+                    // orderNamesInCart={orderNamesInCart}
                   />
                 </div>
               );
