@@ -10,16 +10,16 @@ function App() {
 
   const [mainPage, setMainPage] = useState(true);
   const [page, setPage] = useState("");
+  // chosen foods objects information
   const [cart, setCart] = useState([]);
   const [wholeOrderPrices, setWholeOrderPrices] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [amountOfOrders, setAmountOfOrders] = useState(0);
   const [orders, setOrders] = useState(0);
 
-  let dataTypes = ApiDatas.map((data) => data.type);
-  let TypesOfOrder = dataTypes.filter(
-    (data, index, newData) => newData.indexOf(data) === index
-  );
+  let typeOfEachApiData = ApiDatas.map((data) => data.type);
+  let AllApiTypes = typeOfEachApiData.filter((data, index, newData) => newData.indexOf(data) === index);
+  
   let sameOrdersByName = cart.map(food => food.name);
   let orderNamesInCart = sameOrdersByName.filter((foodname , index , newCart) => newCart.indexOf(foodname) === index);
 
@@ -82,7 +82,7 @@ function App() {
     if (page === "Menu Page") {
       currentPage = (
         <MainMenuPage
-          TypesOfOrder={TypesOfOrder}
+          AllApiTypes={AllApiTypes}
           ApiDatas={ApiDatas}
           cart={cart}
           setCart={setCart}

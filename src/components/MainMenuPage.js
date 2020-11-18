@@ -6,7 +6,7 @@ import SidebarMenu from "./SidebarMenu";
 import "../App.css";
 
 const MenuPage = ({
-  TypesOfOrder,
+  AllApiTypes,
   ApiDatas,
   cart,
   setCart,
@@ -32,11 +32,11 @@ const MenuPage = ({
           <div className="title_mainMenu">
             <span className="menuText">Menu</span>
             <div className="sidBarMenu">
-              <SidebarMenu orderType={TypesOfOrder} />
+              <SidebarMenu AllApiTypes={AllApiTypes} />
             </div>
           </div>
           <div className="main_menu">
-            {TypesOfOrder.map((data) => {
+            {AllApiTypes.map((data) => {
               let sameTypesFoods = ApiDatas.filter(
                 (element) => element.type === `${data}`
               );
