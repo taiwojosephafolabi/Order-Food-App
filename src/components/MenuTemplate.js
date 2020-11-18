@@ -5,7 +5,6 @@ const MenuTemplate = ({
   SameTypeDatas,
   cart,
   setCart,
-  // orderNamesInCart,
 }) => {
   const addToCart = (food) => {
       setCart([...cart, { ...food }]);

@@ -5,13 +5,7 @@ import MenuTemplate from "./MenuTemplate";
 import SidebarMenu from "./SidebarMenu";
 import "../App.css";
 
-const MenuPage = ({
-  AllApiTypes,
-  ApiDatas,
-  cart,
-  setCart,
-  setPage,
-}) => {
+const MenuPage = ({ AllApiTypes, ApiDatas, cart, setCart, setPage }) => {
   return (
     <div>
       <Navbar />

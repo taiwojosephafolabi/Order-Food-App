@@ -2,7 +2,7 @@
     {
       "id": 0,
       "name": "Hamburger",
-      "price": "7",
+      "price": 7,
       "src": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Two fresh high-quality beef patties hot off the grill, on a soft, toasted bun.",
       "type": "food"
@@ -10,7 +10,7 @@
     {
       "id": 1,
       "name": "Cheese Burger",
-      "price": "8",
+      "price": 8,
       "src": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "Two-patty burger with two slices of melted American cheese added.",
       "type": "food"
@@ -18,7 +18,7 @@
     {
       "id": 2,
       "name": "Doner Kebab",
-      "price": "10",
+      "price": 10,
       "src": "https://www.nwemail.co.uk/resources/images/8828868?type=responsive-gallery-fullscreen",
       "description": "A typical kebab consists of bread stuffed with doner meat shavings, lettuce, sliced tomato and onions",
       "type": "food"
@@ -26,7 +26,7 @@
     {
       "id": 3,
       "name": "Kofta Kebab",
-      "price": "10",
+      "price": 10,
       "src": "https://www.wholesomeyum.com/wp-content/uploads/2019/06/wholesomeyum-grilled-ground-lamb-kofta-kebab-recipe-4.jpg",
       "description": "consists of bread stuffed with Lettuce,sliced tomato and onions!",
       "type": "food"
@@ -34,7 +34,7 @@
     {
       "id": 4,
       "name": "Hot Dog",
-      "price": "7",
+      "price": 7,
       "src": "https://ux2cms.imgix.net/images/20151023095415_10r.jpg?w=725&auto=compress,format&blend=https://ux2cms.imgix.net/system-images/gray-overlay-large.png?bs=inherit&balph=0&bm=normal",
       "description": "Our All-beef Hotdog,topped with a slice of melted American cheese.",
       "type": "food"
@@ -42,7 +42,7 @@
     {
       "id": 5,
       "name": "Veggie Sandwich",
-      "price": "6",
+      "price": 6,
       "src": "https://data.thefeedfeed.com/recommended/post_4092686.jpeg",
       "description": "a layer of avocado , diced tomatoes, cucumber slices, bell pepper strips, lettuce, mashrooms and mozzarella cheese slices",
       "type": "food"
@@ -50,7 +50,7 @@
     {
       "id": 6,
       "name": "Lentil Soup",
-      "price": "5",
+      "price": 5,
       "src": "https://www.christinebailey.co.uk/wp-content/uploads/2016/04/Spiced-lentil-soup-e1459600874535.jpg",
       "description": "red lentils, carrots and leeks. It's low in calories",
       "type": "food"
@@ -58,7 +58,7 @@
     {
       "id": 7,
       "name": "Pepperphoni Pizza",
-      "price": "12",
+      "price": 12,
       "src": "https://images.unsplash.com/photo-1458642849426-cfb724f15ef7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "The Pepperphoni Pizza is topped with meat-free 'Pepperphoni' made from pea protein",
       "type": "food"
@@ -66,7 +66,7 @@
     {
       "id": 8,
       "name": "Chicken Sandwich",
-      "price": "8",
+      "price": 8,
       "src": "https://images.immediate.co.uk/production/volatile/sites/2/2017/06/Butchies-2.jpg?quality=45&resize=768,574",
       "description": "consists of boneless, skinless chicken breast served between slices of bread, with pickles,tomatoes",
       "type": "food"
@@ -74,7 +74,7 @@
     {
       "id": 9,
       "name": "Salmon Fish",
-      "price": "14",
+      "price": 14,
       "src": "https://www.onceuponachef.com/images/2011/10/Thai-Chili-Glazed-Salmon-2-760x519.jpg",
       "description": "two slice of salmon fish with chips or salad",
       "type": "food"
@@ -82,7 +82,7 @@
     {
       "id": 10,
       "name": "Smoked Fish",
-      "price": "12",
+      "price": 12,
       "src": "https://bensfarmshop.co.uk/wp-content/uploads/2018/03/wildsmokedmackerel.jpg",
       "description": "two slice of smoked fish with chips or salad",
       "type": "food"
@@ -90,7 +90,7 @@
     {
       "id": 11,
       "name": "Apple Juice",
-      "price": "4",
+      "price": 4,
       "src": "https://www.organicfacts.net/wp-content/uploads/applejuice.jpg",
       "description": "A fresh glass of  apple juice ",
       "type": "drink"
@@ -98,7 +98,7 @@
     {
       "id": 12,
       "name": "Orange Juice",
-      "price": "4",
+      "price": 4,
       "src": "https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/orange-juice-1296x728-feature.jpg?w=1155&h=1528",
       "description": "A fresh glass of orange juice ",
       "type": "drink"
@@ -106,7 +106,7 @@
     {
       "id": 13,
       "name": "Pineapple Juice",
-      "price": "4",
+      "price": 4,
       "src": "https://5.imimg.com/data5/LT/XB/MY-28787720/pineapple-drink-500x500.jpg",
       "description": "A fresh glass of Pineapple juice ",
       "type": "drink"
@@ -114,7 +114,7 @@
     {
       "id": 14,
       "name": "Peach Juice",
-      "price": "4",
+      "price": 4,
       "src": "https://i.pinimg.com/originals/39/e6/04/39e6047b0724b2086c5394d9bccff0c6.jpg",
       "description": "A fresh glass of  Peach juice",
       "type": "drink"
@@ -122,7 +122,7 @@
     {
       "id": 15,
       "name": "Beer",
-      "price": "6",
+      "price": 6,
       "src": "https://static.euronews.com/articles/stories/04/60/38/82/1440x810_cmsv2_becaff49-2b06-5659-9cd3-a6eeefadcde4-4603882.jpg",
       "description": "Different kinds of beers:Corona,Estrella,Peroni Nastro Azzurro,Camden,Pale Ale,..",
       "type": "drink"
@@ -130,7 +130,7 @@
     {
       "id": 16,
       "name": "Wine",
-      "price": "7",
+      "price": 7,
       "src": "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_1924,w_2886,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/wine_rj1ulo.jpg",
       "description": "Different kinds of wines : Shiraz,Cabernet Sauvignon,Merlot,Pinot Noir,Malbec,..",
       "type": "drink"
@@ -138,7 +138,7 @@
     {
       "id": 17,
       "name": "Gin Tonic",
-      "price": "10",
+      "price": 10,
       "src": "https://www.foxandbriar.com/wp-content/uploads/2016/07/Spanish-Gin-Tonics-7-of-19.jpg",
       "description": "A Glass of Gin and Tonic Water Poured over a large amount of ice",
       "type": "drink"
@@ -146,7 +146,7 @@
     {
       "id": 18,
       "name": "Coffee",
-      "price": "3",
+      "price": 3,
       "src": "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "description": "Different Kinds of Coffee : Espresso,Latte,cappuccino,Mocha",
       "type": "drink"
@@ -154,7 +154,7 @@
     {
       "id": 19,
       "name": "Water",
-      "price": "2",
+      "price": 2,
       "src": "https://images.unsplash.com/photo-1534616042650-80f5c9b61f09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "A Bottle or Glass of Water",
       "type": "drink"
@@ -162,7 +162,7 @@
     {
       "id": 20,
       "name": "Coca Cola",
-      "price": "2",
+      "price": 2,
       "src": "https://images.unsplash.com/photo-1581098365948-6a5a912b7a49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
       "description": "A Can of Coca Cola",
       "type": "drink"
@@ -170,7 +170,7 @@
     {
       "id": 21,
       "name": "Diet Coke",
-      "price": "2",
+      "price": 2,
       "src": "https://images-na.ssl-images-amazon.com/images/I/81OGgqbWzDL._SX679_.jpg",
       "description": "A Can of Diet Coke",
       "type": "drink"
@@ -178,7 +178,7 @@
     {
       "id": 22,
       "name": "Tiramisu",
-      "price": "6",
+      "price": 6,
       "src": "https://driscolls.imgix.net/-/media/assets/recipes/tiramisu-mixed-berry-trifle.ashx",
       "description": "layered with a whipped mixture of eggs, sugar and mascarpone cheese, flavoured with cocoa.",
       "type": "dessert"
@@ -186,7 +186,7 @@
     {
       "id": 23,
       "name": "Raspberry Cheese Cake",
-      "price": "6",
+      "price": 6,
       "src": "https://driscolls.imgix.net/-/media/assets/recipes/raspberry-cheesecake-with-grand-marnier.ashx?w=1200&h=900&fit=crop&crop=entropy&q=50&auto=format%2Ccompress&cs=srgb&ixlib=imgixjs-3.4.2",
       "description": "It tastes of the cream cheese,a perfect balance of tanginess from the cream cheese and sweetness.",
       "type": "dessert"
@@ -194,7 +194,7 @@
     {
       "id": 24,
       "name": "Baklava",
-      "price": "5",
+      "price": 5,
       "src": "https://www.dinnerwithjulie.com/wp-content/uploads/2019/10/Baklava-1.jpg",
       "description": "It is a rich, sweet dessert pastry made of layers of filo filled with chopped nuts and sweetened.",
       "type": "dessert"
@@ -202,7 +202,7 @@
     {
       "id": 25,
       "name": "Chocolate Cake",
-      "price": "5",
+      "price": 5,
       "src": "https://img.taste.com.au/tdOiwwh1/taste/2010/01/quick-mix-chocolate-cake-118912-1.jpg",
       "description": "It is prepared with full chocolate. In every bits and pieces you can get the taste of chocolate",
       "type": "dessert"
@@ -210,7 +210,7 @@
     {
       "id": 26,
       "name": "Carrot Cake",
-      "price": "6",
+      "price": 6,
       "src": "https://realfood.tesco.com/media/images/Wicked-carrot-cake-recipe-1400x919--7a958c36-f2ac-4014-b2b5-ccccbe5021c0-0-1400x919.jpg",
       "description": "Carrot cake is a sweet and moist spice cake, full of cut carrots and toasted nuts.",
       "type": "dessert"
@@ -218,7 +218,7 @@
     {
       "id": 27,
       "name": "English Custard",
-      "price": "4",
+      "price": 4,
       "src": "https://food-images.files.bbci.co.uk/food/recipes/custardtart_83910_16x9.jpg",
       "description": "It is smooth, creamy, gently sweet,a little eggy and delicious",
       "type": "dessert"
@@ -226,7 +226,7 @@
     {
       "id": 28,
       "name": "Lemon Drizzle Cake",
-      "price": "10",
+      "price": 10,
       "src": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/lemon-drizzle-loaf-cake-landscape-1567167558.jpg",
       "description": "An amazingly moist lime loaf cake,tastes fresh and delicious. You will love every slice of this lime drizzle cake.",
       "type": "dessert"
@@ -234,7 +234,7 @@
     {
       "id": 29,
       "name": "Salted Caramel Cheesecake",
-      "price": "6",
+      "price": 6,
       "src": "https://images-gmi-pmc.edge-generalmills.com/56656110-c781-4d24-976e-45baee8af49f.jpg",
       "description": "The flavor as slightly sweet and slightly tart but more sweet than tart.Cheesecakes are often topped with strawberries,cherries.",
       "type": "dessert"
@@ -242,7 +242,7 @@
     {
       "id": 30,
       "name": "Waffle",
-      "price": "10",
+      "price": 10,
       "src": "https://www.pcrm.org/sites/default/files/Waffles.jpg",
       "description": "It made from a batter that consists of flour, water, baking powder, oil, and eggs. ",
       "type": "dessert"
@@ -250,7 +250,7 @@
     {
       "id": 31,
       "name": "Pancakes",
-      "price": "10",
+      "price": 10,
       "src": "https://www.inspiredtaste.net/wp-content/uploads/2019/02/Easy-Homemade-Blueberry-Pancakes-Recipe-2-1200.jpg",
       "description": "Most pancakes begin as a mixture of flour, eggs, milk, and butter, are fried on a greased griddle, and are circular in shape",
       "type": "dessert"
@@ -258,7 +258,7 @@
     {
       "id": 32,
       "name": "Ice Cream",
-      "price": "10",
+      "price": 10,
       "src": "https://foodhallcookerystudio.com/wp-content/uploads/2019/06/vegan-ice-creams-1024x805.png",
       "description": "5 scope of different kinds of flavours,you can choose your flavours",
       "type": "dessert"

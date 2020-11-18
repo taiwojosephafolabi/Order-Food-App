@@ -473,6 +473,8 @@ body{
   font-weight: bold;
   text-align: center;
   font-size: 20px;
+  margin-right: 20px;
+  margin-left: 30px;
 }
 
 
@@ -480,4 +482,11 @@ body{
  margin-left: 10px;
  margin-top: 20px;
  border-radius: 10px;
+}
+
+
+.nameOfOrders{
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
 }

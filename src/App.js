@@ -16,11 +16,9 @@ function App() {
     (data, index, newData) => newData.indexOf(data) === index
   );
 
-  let sameOrdersByName = cart.map((food) => food.name);
-  let orderNamesInCart = sameOrdersByName.filter((foodname, index, newCart) => newCart.indexOf(foodname) === index);
-
   const RemoveFoodFromCart = (foodToRemove) => {
-     cart.filter((food) => food !== foodToRemove);
+    let newShoppingCart = cart.filter((food) => food !== foodToRemove);
+    setCart(newShoppingCart);
   };
 
   const GoBack = () => {
@@ -45,7 +43,6 @@ function App() {
           cart={cart}
           setCart={setCart}
           setPage={setPage}
-          // orderNamesInCart={orderNamesInCart}
         />
       );
     } else if (page === "Shopping List") {
@@ -54,8 +51,6 @@ function App() {
           cart={cart}
           GoBack={GoBack}
           RemoveFoodFromCart={RemoveFoodFromCart}
-          // addMore={addMore}
-          // MinusOrder={MinusOrder}
         />
       );
     } else {
