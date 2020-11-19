@@ -5,7 +5,7 @@ import MenuTemplate from "./MenuTemplate";
 import SidebarMenu from "./SidebarMenu";
 import "../App.css";
 
-const MenuPage = ({ AllApiTypes, ApiDatas, cart, setCart, setPage }) => {
+const MenuPage = ({ AllApiTypes, ApiDatas, cart, setCart, setPage , addToCart}) => {
   return (
     <div>
       <Navbar />
@@ -36,6 +36,8 @@ const MenuPage = ({ AllApiTypes, ApiDatas, cart, setCart, setPage }) => {
                     SameTypeDatas={sameTypesFoods}
                     cart={cart}
                     setCart={setCart}
+                    addToCart={addToCart}
+                    // changeQuantity={changeQuantity}
                     // orderNamesInCart={orderNamesInCart}
                   />
                 </div>

@@ -10,6 +10,9 @@ function App() {
   const [mainPage, setMainPage] = useState(true);
   const [page, setPage] = useState("");
   const [cart, setCart] = useState([]);
+  const [quantity, setQuantity] = useState(0);
+
+  console.log("cart", cart);
 
   let typeOfEachApiData = ApiDatas.map((data) => data.type);
   let AllApiTypes = typeOfEachApiData.filter(
@@ -19,6 +22,12 @@ function App() {
   const RemoveFoodFromCart = (foodToRemove) => {
     let newShoppingCart = cart.filter((food) => food !== foodToRemove);
     setCart(newShoppingCart);
+  };
+
+  const addToCart = (newFood) => {
+    return newFood.quantity !== 0
+      ? setQuantity(newFood.quantity + 1)
+      : setCart([...cart, { ...newFood }]);
   };
 
   const GoBack = () => {
@@ -43,6 +52,7 @@ function App() {
           cart={cart}
           setCart={setCart}
           setPage={setPage}
+          addToCart={addToCart}
         />
       );
     } else if (page === "Shopping List") {
@@ -51,6 +61,7 @@ function App() {
           cart={cart}
           GoBack={GoBack}
           RemoveFoodFromCart={RemoveFoodFromCart}
+          quantity={quantity}
         />
       );
     } else {

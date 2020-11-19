@@ -1,16 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-const MenuTemplate = ({
-  SameTypeDatas,
-  cart,
-  setCart,
-}) => {
-  const addToCart = (food) => {
-      setCart([...cart, { ...food }]);
-    }
-
-
+const MenuTemplate = ({ SameTypeDatas, addToCart}) => {
   return (
     <div className="container">
       <div className="row">

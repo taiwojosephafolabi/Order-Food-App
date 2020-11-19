@@ -5,8 +5,7 @@ const BasketItems = ({
   chosenFood,
   index,
   RemoveFoodFromCart,
-  // addMore,
-  // MinusOrder,
+  quantity
 }) => {
   return (
     <div className="basketPageContainer" key={index}>
@@ -19,10 +18,11 @@ const BasketItems = ({
           <div className="">
           <p className="m-2">Name: {chosenFood.name}</p>
           <p className="m-2">Price: {chosenFood.price}</p>
+          <p className="m-2">Amount: {quantity} </p>
           </div>
           <div className="m-2 d-flex">
           <button className="mr-2 p-1" > + </button>
-          <p className="my-2">Amount: </p>
+          <p className="my-2">Amount: {quantity} </p>
           {/* onClick={() => addMore(chosenFood)} */}
           <button className="mr-2 p-1 ml-2"> - </button>
           {/* onClick={() => MinusOrder(chosenFood)} */}
