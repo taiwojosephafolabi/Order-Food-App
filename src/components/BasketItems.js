@@ -18,7 +18,7 @@ const BasketItems = ({
           <div className="">
           <p className="m-2">Name: {chosenFood.name}</p>
           <p className="m-2">Price: {chosenFood.price}</p>
-          <p className="m-2">Amount: {quantity} </p>
+          <p className="m-2">Amount: {chosenFood.quantity} </p>
           </div>
           <div className="m-2 d-flex">
           <button className="mr-2 p-1" > + </button>

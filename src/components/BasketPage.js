@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import BasketItems from "./BasketItems";
 
-const BasketPage = ({ cart, GoBack, RemoveFoodFromCart, quantity }) => {
+const BasketPage = ({ cart, GoBack, RemoveFoodFromCart , quantity }) => {
   let sameOrdersByName = cart.map((food) => food.name);
   let orderNamesInCart = sameOrdersByName.filter(
     (foodname, index, newCart) => newCart.indexOf(foodname) === index
@@ -30,16 +30,18 @@ const BasketPage = ({ cart, GoBack, RemoveFoodFromCart, quantity }) => {
       </div>
       <div className="basketItemsContainer">
         {cart.map((chosenFood, index) => {
-          return (
-            <div key={chosenFood.id}>
-              <BasketItems
-                chosenFood={chosenFood}
-                index={index}
-                RemoveFoodFromCart={RemoveFoodFromCart}
-                quantity={quantity}
-              />
-            </div>
-          );
+          if (chosenFood.quantity === 0) {
+            return (
+              <div key={chosenFood.id}>
+                <BasketItems
+                  chosenFood={chosenFood}
+                  index={index}
+                  RemoveFoodFromCart={RemoveFoodFromCart}
+                  quantity={quantity}
+                />
+              </div>
+            );
+          }
         })}
       </div>
     </div>

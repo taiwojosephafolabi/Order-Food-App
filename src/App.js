@@ -24,10 +24,8 @@ function App() {
     setCart(newShoppingCart);
   };
 
-  const addToCart = (newFood) => {
-    return newFood.quantity !== 0
-      ? setQuantity(newFood.quantity + 1)
-      : setCart([...cart, { ...newFood }]);
+  const addToCart = (newFood) => { 
+    return (newFood.quantity === 0) ? (setCart([...cart, { ...newFood }])) : ( setQuantity(newFood.quantity + 1));
   };
 
   const GoBack = () => {
@@ -53,6 +51,7 @@ function App() {
           setCart={setCart}
           setPage={setPage}
           addToCart={addToCart}
+          // quantity={quantity}
         />
       );
     } else if (page === "Shopping List") {
@@ -62,6 +61,7 @@ function App() {
           GoBack={GoBack}
           RemoveFoodFromCart={RemoveFoodFromCart}
           quantity={quantity}
+          // quantity={quantity}
         />
       );
     } else {

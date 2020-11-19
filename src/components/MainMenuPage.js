@@ -37,8 +37,6 @@ const MenuPage = ({ AllApiTypes, ApiDatas, cart, setCart, setPage , addToCart}) 
                     cart={cart}
                     setCart={setCart}
                     addToCart={addToCart}
-                    // changeQuantity={changeQuantity}
-                    // orderNamesInCart={orderNamesInCart}
                   />
                 </div>
               );
