@@ -7,10 +7,8 @@ import BasketPage from "./components/BasketPage";
 import "./App.css";
 
 function App() {
-  const [mainPage, setMainPage] = useState(true);
-  const [page, setPage] = useState("");
+  const [page, setPage] = useState("Main Page");
   const [cart, setCart] = useState([]);
-  const [quantity, setQuantity] = useState(0);
 
   console.log("cart", cart);
 
@@ -24,8 +22,16 @@ function App() {
     setCart(newShoppingCart);
   };
 
-  const addToCart = (newFood) => { 
-    return (newFood.quantity === 0) ? (setCart([...cart, { ...newFood }])) : ( setQuantity(newFood.quantity + 1));
+  const addToCart = (newFood) => {
+    if (cart.includes(newFood)) {
+      newFood.quantity += 1;
+    } 
+    else {
+      newFood.quantity = 1;
+      let newCart = cart.slice();
+      newCart.push(newFood);
+      setCart(newCart);
+    }
   };
 
   const GoBack = () => {
@@ -33,14 +39,8 @@ function App() {
   };
 
   let currentPage;
-  if (mainPage === true) {
-    currentPage = (
-      <HomePage
-        mainPage={mainPage}
-        setMainPage={setMainPage}
-        setPage={setPage}
-      />
-    );
+  if (page === "Main Page") {
+    currentPage = <HomePage setPage={setPage} />;
   } else {
     if (page === "Menu Page") {
       currentPage = (
@@ -51,7 +51,6 @@ function App() {
           setCart={setCart}
           setPage={setPage}
           addToCart={addToCart}
-          // quantity={quantity}
         />
       );
     } else if (page === "Shopping List") {
@@ -60,8 +59,6 @@ function App() {
           cart={cart}
           GoBack={GoBack}
           RemoveFoodFromCart={RemoveFoodFromCart}
-          quantity={quantity}
-          // quantity={quantity}
         />
       );
     } else {
