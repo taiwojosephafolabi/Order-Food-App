@@ -19,8 +19,14 @@ function App() {
   );
 
   const RemoveFoodFromCart = (foodToRemove) => {
+    if(cart.length > 0){
     let newShoppingCart = cart.filter((food) => food !== foodToRemove);
     setCart(newShoppingCart);
+    }
+    else{
+      setPage("Menu Page");
+      setCart([]);
+    }
   };
 
   const addToCart = (newFood) => {

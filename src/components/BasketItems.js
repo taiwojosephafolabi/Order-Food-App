@@ -49,8 +49,7 @@ const BasketItems = ({
               className="OrderButton"
               onClick={(event) => reduceOrders(chosenFood)}
             >
-              {" "}
-              -{" "}
+              - 
             </button>
           </div>
           </div>
