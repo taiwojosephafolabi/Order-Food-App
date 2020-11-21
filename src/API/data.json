@@ -1,43 +1,69 @@
-[ {
-  "id": 32,
-  "name": "Hummus",
-  "price": 5,
-  "src": "https://www.momables.com/wp-content/uploads/2012/01/Mediterranean-Hummus_square.jpg",
-  "description": "Mashed chickpeas blended with tahini.Comes with bread",
-  "type": "starter"
-},
-{
-  "id": 33,
-  "name": "Helim",
-  "price": 5,
-  "src": "https://cdn.vox-cdn.com/thumbor/LYZlu3VyDNytMP90HlY4GMMQXDM=/0x84:1053x611/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/11555729/pide.png",
-  "description": "Grilled halloumi served with salad. Comes with bread.",
-  "type": "starter"
-},
-{
-  "id": 34,
-  "name": "Oven Baked Prawns",
-  "price": 5,
-  "src": "https://realfood.tesco.com/media/images/Baked-prawns-1400x919-6fb45211-4586-4734-8ef0-00d0dd7c5497-0-1400x919.jpg",
-  "description": "Baked in tomato sauce. Comes with bread.",
-  "type": "starter"
-},
-{
-  "id": 35,
-  "name": "Falafel",
-  "price": 5,
-  "src": "https://i.pinimg.com/originals/4c/c1/c8/4cc1c8a04e051452025d0c55600cd5af.jpg",
-  "description": "Deep fried patty made from chickpeas blended with spices. Comes with bread.",
-  "type": "starter"
-},
-{
-  "id": 36,
-  "name": "Barbunya",
-  "price": 5,
-  "src": "https://i1.wp.com/turkishfoodchef.com/wp-content/uploads/2017/02/Borlotti-Cranberry-Beans-with-Olive-Oil-Barbunya-Pilaki-9.jpg?fit=1600%2C1009&ssl=1",
-  "description": "Beans cooked in a tomato sauce served cold. Comes with bread.",
-  "type": "starter"
-},
+[
+  {
+    "id": 32,
+    "name": "Hummus",
+    "price": 5,
+    "src": "https://www.momables.com/wp-content/uploads/2012/01/Mediterranean-Hummus_square.jpg",
+    "description": "Mashed chickpeas blended with tahini.Comes with bread",
+    "type": "starter"
+  },
+  {
+    "id": 33,
+    "name": "Helim",
+    "price": 5,
+    "src": "https://cdn.vox-cdn.com/thumbor/LYZlu3VyDNytMP90HlY4GMMQXDM=/0x84:1053x611/fit-in/1200x600/cdn.vox-cdn.com/uploads/chorus_asset/file/11555729/pide.png",
+    "description": "Grilled halloumi served with salad. Comes with bread.",
+    "type": "starter"
+  },
+  {
+    "id": 34,
+    "name": "Oven Baked Prawns",
+    "price": 5,
+    "src": "https://realfood.tesco.com/media/images/Baked-prawns-1400x919-6fb45211-4586-4734-8ef0-00d0dd7c5497-0-1400x919.jpg",
+    "description": "Baked in tomato sauce. Comes with bread.",
+    "type": "starter"
+  },
+  {
+    "id": 35,
+    "name": "Falafel",
+    "price": 5,
+    "src": "https://i.pinimg.com/originals/4c/c1/c8/4cc1c8a04e051452025d0c55600cd5af.jpg",
+    "description": "Deep fried patty made from chickpeas blended with spices. Comes with bread.",
+    "type": "starter"
+  },
+  {
+    "id": 36,
+    "name": "Barbunya",
+    "price": 5,
+    "src": "https://i1.wp.com/turkishfoodchef.com/wp-content/uploads/2017/02/Borlotti-Cranberry-Beans-with-Olive-Oil-Barbunya-Pilaki-9.jpg?fit=1600%2C1009&ssl=1",
+    "description": "Beans cooked in a tomato sauce served cold. Comes with bread.",
+    "type": "starter"
+  },
+  {
+    "id": 37,
+    "name": "Tabbouleh",
+    "price": 5,
+    "src": "https://img.taste.com.au/amxkNf1l/w1200-h630-cfill/taste/2016/11/super-easy-tabbouleh-82002-1.jpeg",
+    "description": "Vegetarian salad with bulgur, tomatoes, finely chopped pepper, parsley mint and spring onion dressed with salad oil and pomegranate molasses. Comes with bread.",
+    "type": "starter"
+  },
+  {
+    "id": 38,
+    "name": "Gai Stay",
+    "price": 5,
+    "src": "https://cdn.shopify.com/s/files/1/0866/1944/products/satay_for_web.jpg?v=1571438798",
+    "description": "Chicken satay. Marinated strips of chicken on bamboo skewer chargrilled. Served with peanut sauce.",
+    "type": "starter"
+  },
+  {
+    "id": 39,
+    "name": "Chips",
+    "price": 5,
+    "src": "https://g6t8s5u9.rocketcdn.me/wp-content/uploads/2019/08/Air-Fryer-Chips-featured-b.jpg",
+    "description": "Fried chips with optional sauce",
+    "type": "starter"
+  },
+
   {
     "id": 0,
     "name": "Hamburger",
@@ -92,7 +118,7 @@
     "price": 5,
     "src": "https://www.christinebailey.co.uk/wp-content/uploads/2016/04/Spiced-lentil-soup-e1459600874535.jpg",
     "description": "red lentils, carrots and leeks. It's low in calories",
-    "type": "food"
+    "type": "starter"
   },
   {
     "id": 7,
@@ -126,6 +152,43 @@
     "description": "two slice of smoked fish with chips or salad",
     "type": "food"
   },
+  {
+    "id": 40,
+    "name": "Spaghetti carbonara",
+    "price": 12,
+    "src": "https://www.cookingclassy.com/wp-content/uploads/2020/10/spaghetti-carbonara-01.jpg",
+    "description": "Served with garlic bread",
+    "type": "Pasta"
+  },{
+    "id": 41,
+    "name": "Tagliatelle with bolognese sauce",
+    "price": 12,
+    "src": "https://144f2a3a2f948f23fc61-ca525f0a2beaec3e91ca498facd51f15.ssl.cf3.rackcdn.com/uploads/food_portal_data/recipes/recipe/hero_article_image/4124/ac80df388c79e07c7d74/letterbox_BeerSpaghetti.jpg",
+    "description": "Served with garlic bread",
+    "type": "Pasta"
+  },{
+    "id": 42,
+    "name": "Penne all’arrabbiata",
+    "price": 12,
+    "src": "https://www.scentofbasil.com/wp-content/uploads/2016/06/160501_Penne-arrabiata_1500-752x440.jpg",
+    "description": "Served with garlic bread",
+    "type": "Pasta"
+  },{
+    "id": 43,
+    "name": "Green penne speck and double cream",
+    "price": 12,
+    "src": "https://www.kowalskis.com/sites/default/files/2020-02/penne_primavera.jpg",
+    "description": "Served with garlic bread",
+    "type": "Pasta"
+  },{
+    "id": 44,
+    "name": "Penne with cheese sauce",
+    "price": 12,
+    "src": "https://www.willcookforsmiles.com/wp-content/uploads/2018/10/Homemade-Roasted-Garlic-and-Basil-Baked-Penne-7.jpg",
+    "description": "Served with garlic bread",
+    "type": "Pasta"
+  },
+
   {
     "id": 11,
     "name": "Apple Juice",
@@ -293,5 +356,44 @@
     "src": "https://www.inspiredtaste.net/wp-content/uploads/2019/02/Easy-Homemade-Blueberry-Pancakes-Recipe-2-1200.jpg",
     "description": "Most pancakes begin as a mixture of flour, eggs, milk, and butter, are fried on a greased griddle, and are circular in shape",
     "type": "dessert"
-  }  
+  },{
+    "id": 45,
+    "name": "Strawberry and Banana",
+    "price": 8,
+    "src": "https://skinnyms.com/wp-content/uploads/2012/02/Strawberry-Banana-Protein-Smoothie-1.jpg",
+    "description": "Strawberry and Banana",
+    "type": "Smoothies"
+  },
+  {
+    "id": 46,
+    "name": "Strawberry and Raspberry",
+    "price": 8,
+    "src": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1026800.jpg&w=380&h=380&c=sc&poi=face&q=85",
+    "description": "Strawberry and Raspberry",
+    "type": "Smoothies"
+  },
+  {
+    "id": 47,
+    "name": "Peach, Mango, and Passion Fruit",
+    "price": 8,
+    "src": "https://media.buzzle.com/media/images-en/gallery/drinks/cocktails/1200-505234185-cocktail-sex-on-beach.jpg",
+    "description": "Peach, Mango, and Passion Fruit",
+    "type": "Smoothies"
+  },
+  {
+    "id": 48,
+    "name": "Pineapple, Banana, and Coconut",
+    "price": 8,
+    "src": "https://st2.depositphotos.com/2808141/6754/i/450/depositphotos_67540241-Pineapple-Banana-Coconut-Turmeric-and-Chia-Seed-Smoothies.jpg",
+    "description": "Pineapple, Banana, and Coconut",
+    "type": "Smoothies"
+  },
+  {
+    "id": 49,
+    "name": "Blueberry, Raspberry, Mango,etc",
+    "price": 8,
+    "src": "https://www.godairyfree.org/wp-content/uploads/2006/05/Wild-Blue-Smoothie-online-feature2.jpg",
+    "description": "Blueberry, Raspberry, Mango, and Apple",
+    "type": "Smoothies"
+  }
 ]
