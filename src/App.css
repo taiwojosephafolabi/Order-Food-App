@@ -490,3 +490,24 @@ body{
   text-align: center;
   flex-wrap: wrap;
 }
+
+.basketSign{
+  font-size: 30px;
+  color: rgb(33, 7, 105);
+}
+
+.basketButton{
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3px;
+  margin-right: 10px;
+  border: 1px white solid;
+  padding: 10px 10px;
+  border-radius: 10%;
+}
+
+.basketButton:hover{
+  background-color:rgb(174, 204, 228);
+  color: white;
+}

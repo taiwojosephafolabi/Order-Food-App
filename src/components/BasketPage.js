@@ -19,12 +19,13 @@ const BasketPage = ({ cart, GoBack, RemoveFoodFromCart , addMoreOrders , amountO
         Back
       </button>
       <div className="OrdersInfo">
-        <p>Total Price: £{TotalPriceOfOrders}</p>
         <p className="nameOfOrders ml-auto mr-auto">
+        <p>Your Orders :</p>  
           {orderNamesInCart.map((order) => (
-            <p className="mx-1"> {order}-</p>
+            <p className="mx-1">{order}</p>
           ))}
         </p>
+        <p>Total Price: £{TotalPriceOfOrders}</p>
       </div>
       <div className="basketItemsContainer">
         {cart.map((chosenFood, index) => {

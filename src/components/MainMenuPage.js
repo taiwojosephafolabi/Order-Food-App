@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Navbar from "./Navbar";
+import MenuPageNavbar from "./MenuPageNav";
 import MenuTemplate from "./MenuTemplate";
 import SidebarMenu from "./SidebarMenu";
 import "../App.css";
@@ -15,10 +15,10 @@ const MenuPage = ({
 }) => {
   return (
     <div>
-      <Navbar />
-      <button className="basketButton" onClick={() => setPage("Shopping List")}>
-        Go to basket({cart.length})
-      </button>
+      <MenuPageNavbar 
+      setPage = {setPage} 
+      cart = {cart}
+      />
       <div className="menuPage_container container">
         <div className="menu_container  container">
           <div className="title_mainMenu">
