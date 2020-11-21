@@ -13,6 +13,7 @@ const MenuPageNavbar = ({setPage , cart }) => {
             height="80"
             className="d-inline-block align-top"
             alt="Five Guys logo"
+            onClick={() => setPage("Main Page")}
           />
           <span className="nav_title"></span>
         </a>
