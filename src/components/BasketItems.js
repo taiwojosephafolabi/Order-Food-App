@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-const BasketItems = ({ chosenFood, index, RemoveFoodFromCart }) => {
+const BasketItems = ({ chosenFood, index, RemoveFoodFromCart , addMoreOrders , amountOfOrder , reduceOrders}) => {
   return (
     <div className="basketPageContainer" key={index}>
       <div className="info-BasketContainer">
@@ -21,15 +21,14 @@ const BasketItems = ({ chosenFood, index, RemoveFoodFromCart }) => {
           </div>
           <div className="">
             <p className="m-2">Name: {chosenFood.name}</p>
-            <p className="m-2">Price: {chosenFood.price}</p>
-            <p className="m-2">Amount: {chosenFood.quantity} </p>
+            <p className="m-2">Price For one : {chosenFood.price}</p>
+            <p className="m-2">Amount Of Orders : {chosenFood.quantity} </p>
+            <p className="m-2">Total Price: {chosenFood.price * chosenFood.quantity}</p>
           </div>
           <div className="m-2 d-flex">
-            <button className="mr-2 p-1"> + </button>
-            <p className="my-2">Amount: {chosenFood.quantity} </p>
-            {/* onClick={() => addMore(chosenFood)} */}
-            <button className="mr-2 p-1 ml-2"> - </button>
-            {/* onClick={() => MinusOrder(chosenFood)} */}
+            <button className="mr-2 p-1" onClick ={(event) => addMoreOrders(chosenFood)} > + </button>
+            <p className="my-2">Amount:{chosenFood.quantity} </p>
+            <button className="mr-2 p-1 ml-2" onClick={(event => reduceOrders(chosenFood))}> - </button>
           </div>
         </div>
       </div>

@@ -2,13 +2,13 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import BasketItems from "./BasketItems";
 
-const BasketPage = ({ cart, GoBack, RemoveFoodFromCart }) => {
+const BasketPage = ({ cart, GoBack, RemoveFoodFromCart , addMoreOrders , amountOfOrder , reduceOrders}) => {
   let sameOrdersByName = cart.map((food) => food.name);
   let orderNamesInCart = sameOrdersByName.filter(
     (foodname, index, newCart) => newCart.indexOf(foodname) === index
   );
   let TotalPriceOfOrders = cart
-    .map((food) => food.price)
+    .map((food) => (food.price) * (food.quantity))
     .reduce((previous, current) => {
       return previous + current;
     });
@@ -34,6 +34,9 @@ const BasketPage = ({ cart, GoBack, RemoveFoodFromCart }) => {
                 chosenFood={chosenFood}
                 index={index}
                 RemoveFoodFromCart={RemoveFoodFromCart}
+                addMoreOrders={addMoreOrders}
+                amountOfOrder={amountOfOrder}
+                reduceOrders={reduceOrders}
               />
             </div>
           );

@@ -9,6 +9,7 @@ import "./App.css";
 function App() {
   const [page, setPage] = useState("Main Page");
   const [cart, setCart] = useState([]);
+  const [amountOfOrder,setAmountOfOrder] = useState();
 
   console.log("cart", cart);
 
@@ -25,14 +26,25 @@ function App() {
   const addToCart = (newFood) => {
     if (cart.includes(newFood)) {
       newFood.quantity += 1;
+      console.log("NewCart",cart);
     } 
     else {
       newFood.quantity = 1;
       let newCart = cart.slice();
       newCart.push(newFood);
       setCart(newCart);
+      console.log("cart",cart);
     }
   };
+
+  const addMoreOrders = (newFood) => {
+    setAmountOfOrder(newFood.quantity += 1);
+  }
+
+  const reduceOrders = (newFood) => {
+    setAmountOfOrder(newFood.quantity -= 1);
+  }
+
 
   const GoBack = () => {
     setPage("Menu Page");
@@ -59,6 +71,9 @@ function App() {
           cart={cart}
           GoBack={GoBack}
           RemoveFoodFromCart={RemoveFoodFromCart}
+          addMoreOrders={addMoreOrders}
+          amountOfOrder={amountOfOrder}
+          reduceOrders={reduceOrders}
         />
       );
     } else {
