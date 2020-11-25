@@ -9,6 +9,8 @@ const BasketItems = ({
   reduceOrders,
 }) => {
   return (
+    <div className="container">
+      <div className="row col-3">
     <div className="basketPageContainer" key={index}>
       <div className="info-BasketContainer">
         <div className="orderedFoodDetails">
@@ -54,6 +56,8 @@ const BasketItems = ({
           </div>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 };
