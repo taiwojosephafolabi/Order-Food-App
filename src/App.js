@@ -9,9 +9,6 @@ import "./App.css";
 function App() {
   const [page, setPage] = useState("Main Page");
   const [cart, setCart] = useState([]);
-  // const [amountOfOrder,setAmountOfOrder] = useState();
-
-  // console.log("cart", cart);
 
   let typeOfEachApiData = ApiDatas.map((data) => data.type);
   let AllApiTypes = typeOfEachApiData.filter(
@@ -31,16 +28,14 @@ function App() {
   const addToCart = (newFood) => {
     if (cart.includes(newFood)) {
       newFood.quantity += 1;
-      // console.log("NewCart",cart);
     } else {
       newFood.quantity = 1;
       let newCart = cart.slice();
       newCart.push(newFood);
       setCart(newCart);
-      // console.log("cart",cart);
     }
   };
-  // [{q},{q}]  //[{}]
+
   const addMoreOrders = (newFood) => {
     newFood.quantity += 1;
     let IndexOfNewFood = cart.indexOf(newFood);
