@@ -7,7 +7,6 @@ const BasketPage = ({
   GoBack,
   RemoveFoodFromCart,
   addMoreOrders,
-  amountOfOrder,
   reduceOrders,
 }) => {
   let sameOrdersByName = cart.map((food) => food.name);
@@ -15,7 +14,6 @@ const BasketPage = ({
     (foodname, index, newCart) => newCart.indexOf(foodname) === index
   );
   let TotalPriceOfOrders;
-  let OrdersNames;
 
   if (cart.length > 0) {
     TotalPriceOfOrders = cart
@@ -56,7 +54,6 @@ const BasketPage = ({
                 index={index}
                 RemoveFoodFromCart={RemoveFoodFromCart}
                 addMoreOrders={addMoreOrders}
-                amountOfOrder={amountOfOrder}
                 reduceOrders={reduceOrders}
               />
             </div>

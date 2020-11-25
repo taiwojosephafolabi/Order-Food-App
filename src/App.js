@@ -9,9 +9,9 @@ import "./App.css";
 function App() {
   const [page, setPage] = useState("Main Page");
   const [cart, setCart] = useState([]);
-  const [amountOfOrder,setAmountOfOrder] = useState();
+  // const [amountOfOrder,setAmountOfOrder] = useState();
 
-  console.log("cart", cart);
+  // console.log("cart", cart);
 
   let typeOfEachApiData = ApiDatas.map((data) => data.type);
   let AllApiTypes = typeOfEachApiData.filter(
@@ -19,11 +19,10 @@ function App() {
   );
 
   const RemoveFoodFromCart = (foodToRemove) => {
-    if(cart.length > 0){
-    let newShoppingCart = cart.filter((food) => food !== foodToRemove);
-    setCart(newShoppingCart);
-    }
-    else{
+    if (cart.length > 0) {
+      let newShoppingCart = cart.filter((food) => food !== foodToRemove);
+      setCart(newShoppingCart);
+    } else {
       setPage("Menu Page");
       setCart([]);
     }
@@ -32,25 +31,33 @@ function App() {
   const addToCart = (newFood) => {
     if (cart.includes(newFood)) {
       newFood.quantity += 1;
-      console.log("NewCart",cart);
-    } 
-    else {
+      // console.log("NewCart",cart);
+    } else {
       newFood.quantity = 1;
       let newCart = cart.slice();
       newCart.push(newFood);
       setCart(newCart);
-      console.log("cart",cart);
+      // console.log("cart",cart);
     }
   };
-
+  // [{q},{q}]  //[{}]
   const addMoreOrders = (newFood) => {
-    setAmountOfOrder(newFood.quantity += 1);
-  }
+    newFood.quantity += 1;
+    let IndexOfNewFood = cart.indexOf(newFood);
+    let filteredCart = cart.filter((food) => food !== newFood);
+    filteredCart.splice(IndexOfNewFood, 0, newFood);
+    setCart(filteredCart);
+  };
 
   const reduceOrders = (newFood) => {
-    setAmountOfOrder(newFood.quantity -= 1);
-  }
-
+    if (newFood.quantity > 1) {
+      newFood.quantity -= 1;
+      let IndexOfNewFood = cart.indexOf(newFood);
+      let filteredCart = cart.filter((food) => food !== newFood);
+      filteredCart.splice(IndexOfNewFood, 0, newFood);
+      setCart(filteredCart);
+    }
+  };
 
   const GoBack = () => {
     setPage("Menu Page");
@@ -78,7 +85,6 @@ function App() {
           GoBack={GoBack}
           RemoveFoodFromCart={RemoveFoodFromCart}
           addMoreOrders={addMoreOrders}
-          amountOfOrder={amountOfOrder}
           reduceOrders={reduceOrders}
         />
       );

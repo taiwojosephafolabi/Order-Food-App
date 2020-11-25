@@ -6,7 +6,6 @@ const BasketItems = ({
   index,
   RemoveFoodFromCart,
   addMoreOrders,
-  amountOfOrder,
   reduceOrders,
 }) => {
   return (
