@@ -4,6 +4,7 @@ import ApiDatas from "./API/data.json";
 import HomePage from "./components/HomePage";
 import MainMenuPage from "./components/MainMenuPage";
 import BasketPage from "./components/BasketPage";
+import Checkout from "./components/CheckOut";
 import "./App.css";
 
 function App() {
@@ -58,6 +59,14 @@ function App() {
     setPage("Menu Page");
   };
 
+  const GoCheckOut = () => {
+    setPage("check Out");
+  }
+
+  const GoToShoppingLists = () => {
+    setPage("Shopping List");
+  }
+
   let currentPage;
   if (page === "Main Page") {
     currentPage = <HomePage setPage={setPage} />;
@@ -81,8 +90,16 @@ function App() {
           RemoveFoodFromCart={RemoveFoodFromCart}
           addMoreOrders={addMoreOrders}
           reduceOrders={reduceOrders}
+          GoCheckOut={GoCheckOut}
         />
       );
+     }
+      else if (page === "check Out") {
+        currentPage = (
+          <Checkout
+          GoToShoppingLists={GoToShoppingLists}
+          />
+        );
     } else {
       currentPage = <div>Something went wrong</div>;
     }

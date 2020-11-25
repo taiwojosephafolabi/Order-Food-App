@@ -8,6 +8,7 @@ const BasketPage = ({
   RemoveFoodFromCart,
   addMoreOrders,
   reduceOrders,
+  GoCheckOut
 }) => {
   let sameOrdersByName = cart.map((food) => food.name);
   let orderNamesInCart = sameOrdersByName.filter(
@@ -30,9 +31,16 @@ const BasketPage = ({
 
   return (
     <div>
+      <div className="basketPageButtonContainer">
       <button className="basket_button" onClick={() => GoBack()}>
         Back
       </button>
+      <div className="ml-auto">
+      <button className="basket_button payButton" onClick={() => GoCheckOut()} >
+        Pay
+      </button>
+      </div>
+      </div>
       <div className="OrdersInfo">
         <p className="nameOfOrders ml-auto mr-auto">
           <p>Your Orders :</p>
