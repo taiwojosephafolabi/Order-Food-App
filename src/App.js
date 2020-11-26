@@ -16,16 +16,14 @@ function App() {
     (data, index, newData) => newData.indexOf(data) === index
   );
 
-
   const RemoveFoodFromCart = (foodToRemove) => {
     if (cart.length >= 2) {
       let newShoppingCart = cart.filter((food) => food !== foodToRemove);
       setCart(newShoppingCart);
-    }
-    else {
-     setPage("Menu Page");
+    } else {
+      setPage("Menu Page");
       setCart([]);
-     }
+    }
   };
 
   const addToCart = (newFood) => {
@@ -39,13 +37,12 @@ function App() {
     }
   };
 
-  const changeOrders = (newFood,event) => {
-    if(event.target.value == "add" ){
-    newFood.quantity += 1;
-    let newCart = cart.slice();
-    setCart(newCart);
-    }
-    else if(event.target.value == "minus"){
+  const changeOrders = (newFood, event) => {
+    if (event.target.value == "add") {
+      newFood.quantity += 1;
+      let newCart = cart.slice();
+      setCart(newCart);
+    } else if (event.target.value == "minus") {
       if (newFood.quantity > 1) {
         newFood.quantity -= 1;
         let newCart = cart.slice();
@@ -54,14 +51,13 @@ function App() {
     }
   };
 
-
   const showMenuPage = () => {
     setPage("Menu Page");
-  }
+  };
 
-  const  backToMainPage = () => {
-    setPage("Main Page")
-  }
+  const backToMainPage = () => {
+    setPage("Main Page");
+  };
 
   const backToMenu = () => {
     setPage("Menu Page");
@@ -77,9 +73,7 @@ function App() {
 
   let currentPage;
   if (page === "Main Page") {
-    currentPage = (
-    <HomePage showMenuPage={showMenuPage} />
-    )
+    currentPage = <HomePage showMenuPage={showMenuPage} />;
   } else {
     if (page === "Menu Page") {
       currentPage = (

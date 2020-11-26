@@ -7,32 +7,32 @@ const BasketPage = ({
   backToMenu,
   RemoveFoodFromCart,
   changeOrders,
-  GoCheckOut
+  GoCheckOut,
 }) => {
   let sameOrdersByName = cart.map((food) => food.name);
   let orderNamesInCart = sameOrdersByName.filter(
     (foodname, index, newCart) => newCart.indexOf(foodname) === index
   );
   let TotalPriceOfOrders = cart
-      .map(food => food.price * food.quantity)
-      .reduce((previous, current) => {
-         return (previous + current);
-      },0);
-  
- 
-
+    .map((food) => food.price * food.quantity)
+    .reduce((previous, current) => {
+      return previous + current;
+    }, 0);
 
   return (
     <div>
       <div className="basketPageButtonContainer">
-      <button className="basket_button" onClick={() => backToMenu()}>
-        Back
-      </button>
-      <div className="ml-auto">
-      <button className="basket_button payButton" onClick={() => GoCheckOut()} >
-        Pay
-      </button>
-      </div>
+        <button className="basket_button" onClick={() => backToMenu()}>
+          Back
+        </button>
+        <div className="ml-auto">
+          <button
+            className="basket_button payButton"
+            onClick={() => GoCheckOut()}
+          >
+            Pay
+          </button>
+        </div>
       </div>
       <div className="OrdersInfo">
         <p className="nameOfOrders ml-auto mr-auto">
@@ -44,7 +44,7 @@ const BasketPage = ({
             </p>
           ))}
         </p>
-          <p className="mb-5">Total Price: £{TotalPriceOfOrders}</p>
+        <p className="mb-5">Total Price: £{TotalPriceOfOrders}</p>
       </div>
       <div className="basketItemsContainer">
         {cart.map((chosenFood, index) => {
