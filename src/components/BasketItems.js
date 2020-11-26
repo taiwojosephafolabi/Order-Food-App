@@ -5,8 +5,7 @@ const BasketItems = ({
   chosenFood,
   index,
   RemoveFoodFromCart,
-  addMoreOrders,
-  reduceOrders,
+  changeOrders
 }) => {
   return (
     <div className="container">
@@ -41,14 +40,16 @@ const BasketItems = ({
           <div className="changeAmountOrders">
             <button
               className="OrderButton"
-              onClick={(event) => addMoreOrders(chosenFood)}
+              value={"add"}
+              onClick={(event) => changeOrders(chosenFood,event)}
             >
               +
             </button>
             <p className="my-2 amount">Amount:{chosenFood.quantity} </p>
             <button
               className="OrderButton"
-              onClick={(event) => reduceOrders(chosenFood)}
+              value={"minus"}
+              onClick={(event) => changeOrders(chosenFood,event)}
             >
               - 
             </button>

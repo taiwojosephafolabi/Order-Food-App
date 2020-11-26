@@ -39,25 +39,21 @@ function App() {
     }
   };
 
-  const addMoreOrders = (newFood) => {
+  const changeOrders = (newFood,event) => {
+    if(event.target.value == "add" ){
     newFood.quantity += 1;
     let newCart = cart.slice();
-    // let IndexOfNewFood = cart.indexOf(newFood);
-    // let filteredCart = cart.filter((food) => food !== newFood);
-    // filteredCart.splice(IndexOfNewFood, 0, newFood);
     setCart(newCart);
-  };
-
-  const reduceOrders = (newFood) => {
-    if (newFood.quantity > 1) {
-      newFood.quantity -= 1;
-      let newCart = cart.slice();
-      // let IndexOfNewFood = cart.indexOf(newFood);
-      // let filteredCart = cart.filter((food) => food !== newFood);
-      // filteredCart.splice(IndexOfNewFood, 0, newFood);
-      setCart(newCart);
+    }
+    else if(event.target.value == "minus"){
+      if (newFood.quantity > 1) {
+        newFood.quantity -= 1;
+        let newCart = cart.slice();
+        setCart(newCart);
+      }
     }
   };
+
 
   const showMenuPage = () => {
     setPage("Menu Page");
@@ -103,8 +99,7 @@ function App() {
           cart={cart}
           backToMenu={backToMenu}
           RemoveFoodFromCart={RemoveFoodFromCart}
-          addMoreOrders={addMoreOrders}
-          reduceOrders={reduceOrders}
+          changeOrders={changeOrders}
           GoCheckOut={GoCheckOut}
         />
       );

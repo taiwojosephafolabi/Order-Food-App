@@ -6,8 +6,7 @@ const BasketPage = ({
   cart,
   backToMenu,
   RemoveFoodFromCart,
-  addMoreOrders,
-  reduceOrders,
+  changeOrders,
   GoCheckOut
 }) => {
   let sameOrdersByName = cart.map((food) => food.name);
@@ -55,8 +54,7 @@ const BasketPage = ({
                 chosenFood={chosenFood}
                 index={index}
                 RemoveFoodFromCart={RemoveFoodFromCart}
-                addMoreOrders={addMoreOrders}
-                reduceOrders={reduceOrders}
+                changeOrders={changeOrders}
               />
             </div>
           );
