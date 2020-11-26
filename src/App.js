@@ -41,19 +41,21 @@ function App() {
 
   const addMoreOrders = (newFood) => {
     newFood.quantity += 1;
-    let IndexOfNewFood = cart.indexOf(newFood);
-    let filteredCart = cart.filter((food) => food !== newFood);
-    filteredCart.splice(IndexOfNewFood, 0, newFood);
-    setCart(filteredCart);
+    let newCart = cart.slice();
+    // let IndexOfNewFood = cart.indexOf(newFood);
+    // let filteredCart = cart.filter((food) => food !== newFood);
+    // filteredCart.splice(IndexOfNewFood, 0, newFood);
+    setCart(newCart);
   };
 
   const reduceOrders = (newFood) => {
     if (newFood.quantity > 1) {
       newFood.quantity -= 1;
-      let IndexOfNewFood = cart.indexOf(newFood);
-      let filteredCart = cart.filter((food) => food !== newFood);
-      filteredCart.splice(IndexOfNewFood, 0, newFood);
-      setCart(filteredCart);
+      let newCart = cart.slice();
+      // let IndexOfNewFood = cart.indexOf(newFood);
+      // let filteredCart = cart.filter((food) => food !== newFood);
+      // filteredCart.splice(IndexOfNewFood, 0, newFood);
+      setCart(newCart);
     }
   };
 
