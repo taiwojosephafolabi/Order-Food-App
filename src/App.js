@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import ApiDatas from "./API/data.json";
 import HomePage from "./components/HomePage";
@@ -38,11 +38,11 @@ function App() {
   };
 
   const changeOrders = (newFood, event) => {
-    if (event.target.value == "add") {
+    if (event.target.value === "add") {
       newFood.quantity += 1;
       let newCart = cart.slice();
       setCart(newCart);
-    } else if (event.target.value == "minus") {
+    } else if (event.target.value === "minus") {
       if (newFood.quantity > 1) {
         newFood.quantity -= 1;
         let newCart = cart.slice();

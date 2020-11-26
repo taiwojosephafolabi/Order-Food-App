@@ -545,3 +545,8 @@ body {
   flex-direction: row;
   justify-content: flex-start;
 }
+
+
+.menuImage{
+  cursor: pointer;
+}

@@ -7,7 +7,7 @@ const MenuPageNavbar = ({backToMainPage, GoToShoppingLists , cart }) => {
   return (
     <div>
       <nav className="navbar">
-        <a className="navbar-brand" href="#">
+        <span className="navbar-brand menuImage">
           <img
             src="https://storage.needpix.com/rsynced_images/food-2085075_1280.png"
             width="80"
@@ -17,7 +17,7 @@ const MenuPageNavbar = ({backToMainPage, GoToShoppingLists , cart }) => {
             onClick={() => backToMainPage()}
           />
           <span className="nav_title"></span>
-        </a>
+        </span>
         <button className="basketButton" onClick={() => GoToShoppingLists()}>
       <i className="fas fa-shopping-basket basketSign">({cart.length})</i>
       </button>
