@@ -4,7 +4,7 @@ import BasketItems from "./BasketItems";
 
 const BasketPage = ({
   cart,
-  GoBack,
+  backToMenu,
   RemoveFoodFromCart,
   addMoreOrders,
   reduceOrders,
@@ -32,7 +32,7 @@ const BasketPage = ({
   return (
     <div>
       <div className="basketPageButtonContainer">
-      <button className="basket_button" onClick={() => GoBack()}>
+      <button className="basket_button" onClick={() => backToMenu()}>
         Back
       </button>
       <div className="ml-auto">

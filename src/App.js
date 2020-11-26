@@ -56,7 +56,7 @@ function App() {
     }
   };
 
-  const GoBack = () => {
+  const backToMenu = () => {
     setPage("Menu Page");
   };
 
@@ -87,7 +87,7 @@ function App() {
       currentPage = (
         <BasketPage
           cart={cart}
-          GoBack={GoBack}
+          backToMenu={backToMenu}
           RemoveFoodFromCart={RemoveFoodFromCart}
           addMoreOrders={addMoreOrders}
           reduceOrders={reduceOrders}
