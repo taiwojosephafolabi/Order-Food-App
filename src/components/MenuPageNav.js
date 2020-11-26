@@ -2,7 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../App.css";
 
-const MenuPageNavbar = ({setPage , cart }) => {
+const MenuPageNavbar = ({backToMainPage, GoToShoppingLists , cart }) => {
+
   return (
     <div>
       <nav className="navbar">
@@ -13,11 +14,11 @@ const MenuPageNavbar = ({setPage , cart }) => {
             height="80"
             className="d-inline-block align-top"
             alt="Five Guys logo"
-            onClick={() => setPage("Main Page")}
+            onClick={() => backToMainPage()}
           />
           <span className="nav_title"></span>
         </a>
-        <button className="basketButton" onClick={() => setPage("Shopping List")}>
+        <button className="basketButton" onClick={() => GoToShoppingLists()}>
       <i className="fas fa-shopping-basket basketSign">({cart.length})</i>
       </button>
       </nav>

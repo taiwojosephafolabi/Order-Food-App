@@ -1,11 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 
-const HomePage = ({ setPage }) => {
-  function showMenuPage() {
-    setPage("Menu Page");
-  }
-
+const HomePage = ({ showMenuPage }) => {
   return (
     <div>
       <Navbar />

@@ -10,13 +10,15 @@ const MenuPage = ({
   ApiDatas,
   cart,
   setCart,
-  setPage,
+  backToMainPage,
+  GoToShoppingLists,
   addToCart,
 }) => {
   return (
     <div>
       <MenuPageNavbar 
-      setPage = {setPage} 
+      backToMainPage = {backToMainPage} 
+      GoToShoppingLists={GoToShoppingLists}
       cart = {cart}
       />
       <div className="menuPage_container container">

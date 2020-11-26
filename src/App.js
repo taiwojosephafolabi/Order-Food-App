@@ -16,12 +16,12 @@ function App() {
     (data, index, newData) => newData.indexOf(data) === index
   );
 
+
   const RemoveFoodFromCart = (foodToRemove) => {
-    if (cart.length >= 2 ) {
+    if (cart.length >= 2) {
       let newShoppingCart = cart.filter((food) => food !== foodToRemove);
       setCart(newShoppingCart);
-    } 
-    else {
+    } else {
       setPage("Menu Page");
       setCart([]);
     }
@@ -56,21 +56,31 @@ function App() {
     }
   };
 
+  const showMenuPage = () => {
+    setPage("Menu Page");
+  }
+
+  const  backToMainPage = () => {
+    setPage("Main Page")
+  }
+
   const backToMenu = () => {
     setPage("Menu Page");
   };
 
   const GoCheckOut = () => {
     setPage("check Out");
-  }
+  };
 
   const GoToShoppingLists = () => {
     setPage("Shopping List");
-  }
+  };
 
   let currentPage;
   if (page === "Main Page") {
-    currentPage = <HomePage setPage={setPage} />;
+    currentPage = (
+    <HomePage showMenuPage={showMenuPage} />
+    )
   } else {
     if (page === "Menu Page") {
       currentPage = (
@@ -79,7 +89,8 @@ function App() {
           ApiDatas={ApiDatas}
           cart={cart}
           setCart={setCart}
-          setPage={setPage}
+          backToMainPage={backToMainPage}
+          GoToShoppingLists={GoToShoppingLists}
           addToCart={addToCart}
         />
       );
@@ -94,13 +105,8 @@ function App() {
           GoCheckOut={GoCheckOut}
         />
       );
-     }
-      else if (page === "check Out") {
-        currentPage = (
-          <Checkout
-          GoToShoppingLists={GoToShoppingLists}
-          />
-        );
+    } else if (page === "check Out") {
+      currentPage = <Checkout GoToShoppingLists={GoToShoppingLists} />;
     } else {
       currentPage = <div>Something went wrong</div>;
     }
