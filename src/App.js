@@ -21,10 +21,11 @@ function App() {
     if (cart.length >= 2) {
       let newShoppingCart = cart.filter((food) => food !== foodToRemove);
       setCart(newShoppingCart);
-    } else {
-      setPage("Menu Page");
-      setCart([]);
     }
+    else {
+     setPage("Menu Page");
+      setCart([]);
+     }
   };
 
   const addToCart = (newFood) => {

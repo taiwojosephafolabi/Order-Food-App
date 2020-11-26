@@ -14,19 +14,13 @@ const BasketPage = ({
   let orderNamesInCart = sameOrdersByName.filter(
     (foodname, index, newCart) => newCart.indexOf(foodname) === index
   );
-  let TotalPriceOfOrders;
-
-  if (cart.length > 0) {
-    TotalPriceOfOrders = cart
+  let TotalPriceOfOrders = cart
       .map(food => food.price * food.quantity)
       .reduce((previous, current) => {
-        return previous + current;
-      });
-  }
-  else{
-    TotalPriceOfOrders = 0 ;
-  }
-
+         return (previous + current);
+      },0);
+  
+ 
 
 
   return (
