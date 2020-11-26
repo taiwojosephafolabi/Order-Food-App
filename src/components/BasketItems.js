@@ -51,7 +51,7 @@ const BasketItems = ({
                   <button
                     className="OrderButton"
                     value={"minus"}
-                    onClick={(event) => changeOrders(chosenFood, event)}
+                      onClick={(event) => changeOrders(chosenFood, event)}
                   >
                     -
                   </button>

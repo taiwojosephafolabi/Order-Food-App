@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+  import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import ApiDatas from "./API/data.json";
 import HomePage from "./components/HomePage";
@@ -47,6 +47,18 @@ function App() {
         newFood.quantity -= 1;
         let newCart = cart.slice();
         setCart(newCart);
+      }
+      else{
+        if(cart.length === 1){
+          newFood.quantity = 0 ;
+          setPage("Menu Page");
+           setCart([]);
+        }
+        else{
+          newFood.quantity = 0 ;
+          let newShoppingCart = cart.filter((food) => food !== newFood);
+          setCart(newShoppingCart);
+        } 
       }
     }
   };
