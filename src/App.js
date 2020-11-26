@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import ApiDatas from "./API/data.json";
 import HomePage from "./components/HomePage";
