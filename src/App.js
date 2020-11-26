@@ -17,10 +17,11 @@ function App() {
   );
 
   const RemoveFoodFromCart = (foodToRemove) => {
-    if (cart.length > 0) {
+    if (cart.length >= 2 ) {
       let newShoppingCart = cart.filter((food) => food !== foodToRemove);
       setCart(newShoppingCart);
-    } else {
+    } 
+    else {
       setPage("Menu Page");
       setCart([]);
     }
