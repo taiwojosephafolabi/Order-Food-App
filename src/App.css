@@ -3,6 +3,10 @@ body {
   padding: 0;
 }
 
+.mainNavbar{
+  cursor: pointer;
+}
+
 .navbar {
   background: linear-gradient(rgb(32, 88, 121), rgb(88, 126, 177));
 }
@@ -292,7 +296,6 @@ body {
 .card {
   display: flex;
   width: 300px;
-  height: 400px;
   margin-left: 20px;
   margin-bottom: 30px;
   margin-top: 40px;
@@ -313,7 +316,7 @@ body {
 
 .card-title {
   height: 20px;
-  font-size: 26px;
+  font-size: 22px;
   color: rgb(33, 6, 83);
   font-family: "Teko", sans-serif;
 }
@@ -324,6 +327,7 @@ body {
 
 .card-text {
   height: 90px;
+  overflow: auto;
   font-family: "Frank Ruhl Libre", serif;
 }
 

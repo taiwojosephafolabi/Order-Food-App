@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar">
-        <a className="navbar-brand" href="#">
+        <div className="navbar-brand mainNavbar">
           <img
             src="https://storage.needpix.com/rsynced_images/food-2085075_1280.png"
             width="80"
@@ -15,7 +15,7 @@ const Navbar = () => {
             alt="Five Guys logo"
           />
           <span className="nav_title"></span>
-        </a>
+        </div>
       </nav>
       <div>
       </div>
