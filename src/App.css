@@ -554,3 +554,13 @@ body {
 .menuImage{
   cursor: pointer;
 }
+
+.checkout{
+  background-color:rgb(33, 7, 105);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-radius: 20px;
+}
+
